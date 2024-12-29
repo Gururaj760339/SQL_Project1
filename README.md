@@ -74,7 +74,6 @@ SELECT COUNT(*) FROM sales;
 
 
 SELECT * FROM sales
-
 WHERE transactions_id ISNULL
 
 	OR sale_date ISNULL
