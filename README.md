@@ -12,4 +12,7 @@ This project design to demonstrate SQL skills and techniques typically used by d
 1. Set up a retail sales database: create and populate a retail sales database with the provided sales data.
 2. Data Cleaning: Identify and remove any records with missing or null values.
 3. Exploratory Data Analysis: Perform basic exploratory data analysis to understand the dataset.
-4. Business Analysis: 
+4. Business Analysis: Use Sql to answer spccific business question and derive insights the sales data.
+
+
+
