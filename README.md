@@ -67,6 +67,62 @@ CREATE TABLE sales
 **Null Value Check:** Check for any null values in the dataset and records with missing value in the dataset and delete records with missing data.
 
 
+SELECT * FROM sales
+LIMIT 10;
+
+SELECT COUNT(*) FROM sales;
+
+
+SELECT * FROM sales
+
+WHERE transactions_id ISNULL
+
+	OR sale_date ISNULL
+ 
+	OR sale_time ISNULL
+ 
+	OR customer_id ISNULL
+ 
+	OR gender ISNULL
+ 
+	OR age ISNULL
+ 
+	OR category ISNULL
+ 
+	OR quantiy ISNULL
+ 
+	OR price_per_unit ISNULL
+ 
+	OR cogs ISNULL
+ 
+	OR total_sale ISNULL;
+ 
+
+DELETE FROM sales
+
+WHERE transactions_id ISNULL
+
+	OR sale_date ISNULL
+ 
+	OR sale_time ISNULL
+ 
+	OR customer_id ISNULL
+ 
+	OR gender ISNULL
+ 
+	OR age ISNULL
+ 
+	OR category ISNULL
+ 
+	OR quantiy ISNULL
+ 
+	OR price_per_unit ISNULL
+ 
+	OR cogs ISNULL
+ 
+	OR total_sale ISNULL;
+
+
 
 
 
