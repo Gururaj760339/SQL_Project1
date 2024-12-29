@@ -1,4 +1,4 @@
-**Project Name**: Retail Sales Analysis
+**Project Name**: Retail Sales Analysis/n
 **Level:** Beginner
 **Database:** raj
 
