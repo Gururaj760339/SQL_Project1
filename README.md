@@ -137,6 +137,106 @@ SELECT COUNT(DISTINCT customer_id) FROM sales;
 SELECT DISTINCT gender FROM sales;
 
 
+**Q.4 Write a SQL query to retrieve all columns for sales made on '2022-11-05.**
+SELECT * FROM sales
+
+WHERE sale_date = '2022-11-05';
+
+
+
+**Q.5 Write a SQL query to calculate the total sales (total_sale) for each category.**
+
+SELECT category, SUM(total_sale) AS total_sales FROM sales
+
+GROUP BY category;
+
+
+**Q-3 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 4 in the month of Nov-2022.**
+
+SELECT * FROM sales
+
+WHERE category = 'Clothing'
+
+	AND
+ 
+		quantiy >=4
+  
+	AND
+ 
+		TO_CHAR(sale_date, 'YYYY-MM') = '2022-11';
+  
+
+**Q-4 Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**
+
+SELECT AVG(age) FROM sales
+
+WHERE category = 'Beauty';
+
+
+
+**Q-5 Write a SQL query to find all transactions where the total_sale is greater than 1000.**
+
+SELECT * FROM sales
+
+WHERE total_sale> 1000;
+
+
+
+**Q-6 Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**
+
+SELECT gender, category, COUNT(*) AS total FROM sales
+
+GROUP BY category, gender;
+
+
+**Q-7 Write a SQL query to calculate the average sale for each month. Find out best selling month in each year.**
+
+
+SELECT 
+
+		EXTRACT(MONTH FROM sale_date) AS months,
+  
+		AVG(total_sale) AS avgsale FROM sales
+  
+			GROUP BY months
+   
+			ORDER BY avgsale DESC;
+   
+
+**Q-8 Write a SQL query to find the top 5 customers based on the highest total sales.**
+
+
+SELECT customer_id, SUM(total_sale) AS total_sales FROM sales
+
+GROUP BY 1
+
+ORDER BY total_sales DESC
+
+LIMIT 5;
+
+
+**Q-9 Write a SQL query to find the number of unique customers who purchased items from each category**.
+
+SELECT category, COUNT(DISTINCT customer_id) AS unique_customers FROM sales
+
+GROUP BY category;
+
+
+**Q-10 Write a SQL query to create each shift and number of orders (Example Morning <12, Afternoon Between 12 & 17, Evening >17):**
+
+
+SELECT EXTRACT(HOUR FROM sale_time) AS hours, 
+
+	CASE 
+ 
+		WHEN EXTRACT(HOUR FROM sale_time) > 12 THEN 'Morning' 
+  
+		WHEN EXTRACT(HOUR FROM sale_time) >= 12 AND EXTRACT(HOUR FROM sale_time) <= 17 THEN 'Afternoon' 
+  
+ELSE 'Evening' END AS time_of_day 
+
+FROM sales;
+
 
 
 
