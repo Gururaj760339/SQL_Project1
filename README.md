@@ -120,6 +120,21 @@ WHERE transactions_id ISNULL
  
 	OR total_sale ISNULL;
 
+**3. Data Analysis & Findings**
+the following SQL quries were develope to answer Spcific business question:
+
+**Q.1 How many Sales we have?**
+
+SELECT COUNT(*) FROM sales;
+
+**Q.2 How many unique customers we have?**
+
+SELECT COUNT(DISTINCT customer_id) FROM sales;
+
+
+**Q.3 How many unique category we have?**
+
+SELECT DISTINCT gender FROM sales;
 
 
 
