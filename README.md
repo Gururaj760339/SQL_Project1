@@ -18,4 +18,18 @@ This project design to demonstrate SQL skills and techniques typically used by d
 **4. Business Analysis:** nUse Sql to answer spccific business question and derive insights the sales data.
 
 
+**Project Structure**
+
+**1. Database Setup**
+
+**Database Creation:** The project starts by creating a database name raj
+
+**Table Creation:** a table named sales is created to store the sales data. the table structure includes columns for transaction id, sale date, sale time, customer id, gender, age, product category, quantity sold, price per unit, cost of goods sold and total sale amount.
+
+
+
+
+
+
+
 
